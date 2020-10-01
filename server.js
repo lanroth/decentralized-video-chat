@@ -1,11 +1,11 @@
 require("dotenv").config();
 var sslRedirect = require("heroku-ssl-redirect");
 // Get twillio auth and SID from heroku if deployed, else get from local .env file
-var twillioAuthToken =
-  process.env.HEROKU_AUTH_TOKEN || process.env.LOCAL_AUTH_TOKEN;
-var twillioAccountSID =
-  process.env.HEROKU_TWILLIO_SID || process.env.LOCAL_TWILLIO_SID;
-var twilio = require("twilio")(twillioAccountSID, twillioAuthToken);
+// var twillioAuthToken =
+  // process.env.HEROKU_AUTH_TOKEN || process.env.LOCAL_AUTH_TOKEN;
+// var twillioAccountSID =
+  // process.env.HEROKU_TWILLIO_SID || process.env.LOCAL_TWILLIO_SID;
+// var twilio = require("twilio")(twillioAccountSID, twillioAuthToken);
 var express = require("express");
 var app = express();
 var http = require("http").createServer(app);
@@ -96,14 +96,14 @@ io.on("connection", function (socket) {
   // token to get ephemeral credentials to use the TURN server.
   socket.on("token", function (room) {
     logIt("Received token request", room);
-    twilio.tokens.create(function (err, response) {
-      if (err) {
-        logIt(err, room);
-      } else {
-        logIt("Token generated. Returning it to the browser client", room);
-        socket.emit("token", response).to(room);
-      }
-    });
+    // twilio.tokens.create(function (err, response) {
+    //   if (err) {
+    //     logIt(err, room);
+    //   } else {
+    //     logIt("Token generated. Returning it to the browser client", room);
+        socket.emit("token", "response").to(room);
+      // }
+    // });
   });
 
   // Relay candidate messages

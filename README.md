@@ -1,5 +1,8 @@
 # Zipcall - Decentralized Video Chat
 
+I cloned this repo and hacked out references to Twilio.
+I'm running this on a LAN and don't see the need for it.
+
 [![Author](https://img.shields.io/badge/Author-ianramzy-brightgreen.svg)](https://ianramzy.com)
 ![License: CC-NC](https://img.shields.io/badge/License-CCNC-blue.svg)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg)](https://paypal.me/ianramzy)
@@ -9,7 +12,7 @@
 
 # https://zipcall.io
 
-Decentralized video chat platform powered by WebRTC using Twilio STUN/TURN infrastructure.
+Decentralized video chat platform powered by WebRTC ~~using Twilio STUN/TURN infrastructure~~.
 Zipcall provides video quality and latency simply not available with traditional
 technology.
 
@@ -38,12 +41,12 @@ git clone https://github.com/ianramzy/decentralized-video-chat
 cd decentralized-video-chat
 ```
 
-#### Set up credentials
+### ~~Set up credential~~
 
-- Rename .env.template to .env
-- Sign up for free twilio account https://www.twilio.com/login
-- Get your Account SID and Auth Token from the Twillio console
-- Fill in your credentials in the .env file
+- ~~Rename .env.template to .env~~
+- ~~Sign up for free twilio account https://www.twilio.com/login~~
+- ~~Get your Account SID and Auth Token from the Twillio console~~
+- ~~Fill in your credentials in the .env file~~
 
 #### Install dependencies
 
